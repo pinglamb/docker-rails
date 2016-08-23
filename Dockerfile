@@ -21,9 +21,6 @@ RUN bundle install --binstubs --deployment --without development test --jobs 2
 RUN unlink /etc/nginx/sites-enabled/default
 ADD docker/nginx-app.conf /etc/nginx/sites-enabled/app.conf
 ADD docker/nginx-env.conf /etc/nginx/main.d/nginx-env.conf
-RUN mkdir /etc/nginx/ssl
-ADD docker/ssl/cert.pem /etc/nginx/ssl/cert.pem
-ADD docker/ssl/key.pem /etc/nginx/ssl/key.pem
 
 # Init Scripts
 RUN mkdir -p /etc/my_init.d
