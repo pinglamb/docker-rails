@@ -1,0 +1,4 @@
+#!/bin/sh
+cd /home/app
+exec 2>&1
+exec /sbin/setuser app bundle exec sidekiq -q default -e production -P /tmp/sidekiq.pid -L /home/app/log/sidekiq.log

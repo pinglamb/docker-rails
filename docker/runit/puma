@@ -1,0 +1,3 @@
+#!/bin/sh
+cd /home/app
+exec /sbin/setuser app bundle exec puma config.ru --pidfile /tmp/puma.pid

@@ -1,0 +1,3 @@
+production:
+  host: "<%= ENV['ELASTICSEARCH_PORT_9200_TCP_ADDR'] %>"
+  port: "<%= ENV['ELASTICSEARCH_PORT_9200_TCP_PORT'] %>"
